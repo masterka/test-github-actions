@@ -16,4 +16,5 @@ jobs:
     steps:
       - run: |
          echo ${{ inputs.param1 }}
-         echo ${{ secret_param1 }}
+         echo "masterka"
+         echo $secret_param1
