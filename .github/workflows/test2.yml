@@ -14,6 +14,6 @@ jobs:
     env:
       secret_param1: ${{ secrets.param1 }}
     steps:
-      - run: |
+      run: |
         echo ${{ inputs.param1 }}
         echo ${{ secret_param1 }}
