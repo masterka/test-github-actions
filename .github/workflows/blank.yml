@@ -8,3 +8,5 @@ jobs:
     uses: ./.github/workflows/test2.yml
     with:
       param1: hoge
+    secrets:
+      param1: ${{ secrets.param1 }}
