@@ -7,14 +7,16 @@ on:
         description: 'Param1'
         required: true
         type: string
+    secrets:
+      param1:
+        required: true
+
 
 jobs:
   call-another-reusable:
     runs-on: ubuntu-latest
-    env:
-      secret_param1: ${{ secrets.param1 }}
     steps:
       - run: |
          echo ${{ inputs.param1 }}
          echo "masterka"
-         echo $secret_param1
+         echo ${{ secrets.param1 }}
