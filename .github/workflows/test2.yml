@@ -11,7 +11,9 @@ on:
 jobs:
   call-another-reusable:
     runs-on: ubuntu-latest
+    env:
+      secret_param1: ${{ secrets.param1 }}
     steps:
       - run: |
         echo ${{ inputs.param1 }}
-        echo ${{ secrets.param1 }}
+        echo ${{ secret_param1 }}
