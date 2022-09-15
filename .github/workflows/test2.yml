@@ -10,6 +10,6 @@ on:
 
 jobs:
   call-another-reusable:
-    uses: kondoumh/iac-dev/.github/workflows/reusable-nested-flow.yml@master
-    with:
-      param1: ${{ inputs.param1 }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.param1 }}
