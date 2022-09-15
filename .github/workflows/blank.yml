@@ -1,0 +1,10 @@
+name: Use reusable flow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  UseReusableFlow:
+    uses: masterka/test-github-actions/.github/workflows/test2.yml
+    with:
+      param1: hoge
